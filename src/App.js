@@ -7,7 +7,7 @@ import Products from './components/Products/Products';
 import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import Profile from './components/Profile/Profile';
-import Product from './components/Products/Product/Product';
+import Product from './components/Product/Product';
 
 function App() {
   return (

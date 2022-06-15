@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '../../Shared/Navbar/Navbar';
-import products from '../../../data/products.json';
+import Navbar from '../Shared/Navbar/Navbar';
+import products from '../../data/products.json';
 import { useParams } from 'react-router-dom';
 
 const Product = () => {
