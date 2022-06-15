@@ -7,7 +7,7 @@ const Cart = () => {
     return (
         <section className='bg-brand bg-brand-container'>
             <Navbar />
-            <h1 className='text-center mt-5'>Cart</h1>
+            <h1 className='text-center mt-5 fs-4'>Cart</h1>
             <Footer />
         </section>
     );

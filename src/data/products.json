@@ -1,0 +1,73 @@
+[{
+    "id": "1",
+    "name": "Airpod",
+    "description": "The newly introduced to the AirPods 2 H1 chip allows for a swift switch between the configurable devices, those including iPhone, iPad, iPod Touch, Apple Watch, Apple TV and Mac. Despite the lack of design changes to the 2nd generation of the AirPods, the newer edition of the device lacks the cord, making them entirely wire-free. The 2022 AirPods are offered with a Wireless Charging Case, enabling Qi-based wireless charging.",
+    "price": "16000",
+    "image": "https://i.ibb.co/80yP4KY/airpod.jpg"
+}, {
+    "id": "2",
+    "name": "Bag",
+    "description": "The main compartment of a backpack typically has two large compartments, and these are often separated by a thin divider. There are also pockets on the outside of the bag, which can be used for carrying smaller items. Some backpacks also have a separate compartment for storing a laptop. A backpack is a type of bag that can be used for hiking, traveling, or everyday use. The main compartment of a backpack typically has two large compartments, and these are often separated by a thin divider. There are also pockets on the outside of the bag, which can be used for carrying smaller items. Some backpacks also have a separate compartment for storing a laptop.",
+    "price": "4500",
+    "image": "https://i.ibb.co/2nnFLr5/bag.jpg"
+}, {
+    "id": "3",
+    "name": "Body Spray",
+    "description": "A light and refreshing fragrance, this body spray will be sure to refresh your senses and leave you feeling rejuvenated.",
+    "price": "1500",
+    "image": "https://i.ibb.co/c6MG9FT/body-spray.jpg"
+}, {
+    "id": "4",
+    "name": "Camera",
+    "description": "Introducing the latest in cutting-edge camera technology, the Dreamy Digital Camera. Built with the latest in high-resolution and high-quality video technology, this camera is the perfect solution for all your photography needs. Take a picture or video and watch it come to life with Dreamy's advanced touch screen technology. You can even take selfies with the camera's built-in front-facing camera.",
+    "price": "22000",
+    "image": "https://i.ibb.co/s6K3K5Y/camera.jpg"
+}, {
+    "id": "5",
+    "name": "iPhone",
+    "description": "Apple's iPhone is a small device that can be used for a variety of purposes. It has a touchscreen that responds to your touch and is the home to your apps. The iPhone is a great option for those who want a phone that is compact and user-friendly. It's also a great option for those who want to use their phone for productivity. The iPhone has a variety of applications that can be used for various purposes. For example, there are applications for tracking your workouts, setting reminders, and many more.",
+    "price": "110000",
+    "image": "https://i.ibb.co/pJ9SFFJ/iphone.jpg"
+}, {
+    "id": "6",
+    "name": "Laptop",
+    "description": "The new, improved laptop has all the features you want, like a sleek, lightweight design and a long-lasting battery. It’s the perfect way to stay connected to the things that matter most. Get the latest software for your laptop, including Windows 10, Office 365, and McAfee. The sleek, lightweight design is a great way to stay connected to the things that matter most. You’ll love the long-lasting battery, too. It’s the perfect way to stay connected on the go.",
+    "price": "260000",
+    "image": "https://i.ibb.co/XSRMTGz/laptop.jpg"
+}, {
+    "id": "7",
+    "name": "Mouse",
+    "description": "The perfect mouse for your desk! A mouse is a small device that you can use to move the cursor on your computer screen. It's the most basic input device that you can use to control your computer. This mouse is perfect for any desk and includes two buttons and a scroll wheel. The ergonomic design makes it comfortable to use and its ambidextrous design is perfect for left-handed or right-handed users. The optical sensor tracks smoothly on most surfaces, including glass. This mouse is great for people who need a mouse for work or school. It's small and compact, so it doesn't take up much space on your desk. It's great for gaming, as well, and the left and right buttons are programmable to the commands you need. It's the perfect choice for your desk!",
+    "price": "950",
+    "image": "https://i.ibb.co/f8pvchw/mouse.jpg"
+}, {
+    "id": "8",
+    "name": "Mugs",
+    "description": "Mugs are a great way to get your morning coffee or tea. They are perfect for work, school, or any other time you need a drink. They come in a variety of colors and designs. You can get the perfect mug for any occasion.",
+    "price": "1250",
+    "image": "https://i.ibb.co/mypDJzD/mugs.jpg"
+}, {
+    "id": "9",
+    "name": "Shoe",
+    "description": "The Giamba shoes are handcrafted in Italy with soft leather. They are available in a variety of colors and sizes, and have a heel height of 3 inches.",
+    "price": "6500",
+    "image": "https://i.ibb.co/XCGBDLh/shoe.jpg"
+}, {
+    "id": "10",
+    "name": "Sunglass",
+    "description": "If you're going to spend a day in the sun, you need a good pair of sunglasses. The Julbo Explorist is a lightweight and durable pair of sunglasses. They are equipped with polarized lenses, which eliminate the glare from water and snow. The lenses are made of a material that filters out blue light and also provides 100% UV protection. The Julbo Explorist comes with an adjustable nosepiece and soft, comfortable padding on the inside of the frame. The frames are also made of a flexible material, which makes them perfect for kids and adults alike.",
+    "price": "850",
+    "image": "https://i.ibb.co/BZN79kz/sunglass.jpg"
+}, {
+    "id": "11",
+    "name": "Television",
+    "description": "The Sony Bravia KDL-55W850C is a smart, 4K Ultra HD TV that features Sony's TRILUMINOS Display and X-tended Dynamic Range Pro for enhanced contrast and clarity. The 4K resolution gives you four times the resolution of Full HD for stunning clarity and detail. You can enjoy your favorite movies, TV shows, and games in spectacular detail with 4K X-Reality PRO picture processing. This Sony TV also features a sleek design with a backlit remote and a glass stand that is curved for a sleek look.",
+    "price": "114950",
+    "image": "https://i.ibb.co/qWD6nN0/tv.jpg"
+}, {
+    "id": "12",
+    "name": "Apple Watch",
+    "description": "The Apple Watch is a great device for individuals who are looking for a convenient way to track their fitness, without having to take their phone with them everywhere. It can track your heart rate, your steps, and even your activity. The watch is water resistant, and can be used in rain or shine. It has a sleek, modern design, with a bright display. You can also customize the watch with different bands and faces, making it truly your own.",
+    "price": "33000",
+    "image": "https://i.ibb.co/zFPY6Mp/watch.jpg"
+}]

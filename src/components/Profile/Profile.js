@@ -7,7 +7,7 @@ const Profile = () => {
     return (
         <section className='bg-brand bg-brand-container'>
             <Navbar />
-            <h1 className="text-center mt-5">Profile</h1>
+            <h1 className="text-center mt-5 fs-4">Profile</h1>
             <Footer />
         </section>
     );

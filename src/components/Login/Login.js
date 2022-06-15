@@ -7,7 +7,7 @@ const Login = () => {
     return (
         <section className='bg-brand bg-brand-container'>
             <Navbar />
-            <h1 className="text-center mt-5">Login</h1>
+            <h1 className="text-center mt-5 fs-4">Login</h1>
             <Footer />
         </section>
     );
