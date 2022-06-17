@@ -4,8 +4,8 @@
 
 .cart-deck {
     background-color: white;
-    /* width: 200px; */
-    /* margin: 0 1rem; */
+    min-width: 320px;
+    min-height: 350px;
     border: 2px solid #f2f2f2;
     border-radius: 15px;
     box-shadow: 0 5px 15px #f2f2f2;
@@ -24,12 +24,12 @@
 }
 
 .cart-title {
-    font-size: 1.2rem;
+    font-size: 16px;
     font-weight: bold;
     margin: 0.5rem 0;
 }
 
 .cart-text {
-    font-size: 1rem;
+    font-size: 14px;
     margin: 0.5rem 0;
 }

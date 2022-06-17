@@ -9,6 +9,8 @@ import NotFound from './components/NotFound/NotFound';
 import Profile from './components/Profile/Profile';
 import Product from './components/Product/Product';
 
+import Shipping from './components/PrivateRoutes/Shipping/Shipping';
+
 function App() {
   return (
     <Routes>
@@ -20,6 +22,7 @@ function App() {
       <Route path="login" element={<Login />} />
       <Route path="profile" element={<Profile />} />
       <Route path="dashboard" element={<Dashboard />} />
+      <Route path="shipping" element={<Shipping />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
