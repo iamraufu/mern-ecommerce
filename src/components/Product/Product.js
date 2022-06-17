@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
 import products from '../../data/products.json';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import { addToDB } from '../../utilities/localDB';
+import Swal from 'sweetalert2';
+import Review from '../Review/Review';
 
 const Product = () => {
+    
+    const navigate = useNavigate();
 
     const { id } = useParams();
     const product = products.find(product => product.id === id);
 
+    const [cart, setCart] = useState([]);
+
+    const addToCart = (product) => {
+        const newCart = [...cart, product];
+        setCart(newCart)
+        addToDB(id)
+        Swal.fire(
+            'Successful!',
+            `You Have Added ${product.name}!`,
+            'success'
+          )
+    }
+    
     return (
         <section className='bg-brand bg-brand-container'>
             <Navbar />
@@ -19,8 +37,8 @@ const Product = () => {
                     <div className="col-lg-4">
                         <img src={product.image} style={{ borderRadius: '1rem', boxShadow: '0 5px 15px #c4c4c44d' }} className='img-fluid mx-auto d-block mb-3' width={250} alt={product.image} />
                         <div className="d-flex justify-content-center align-items-center">
-                            <button className='btn btn-outline-warning mt-2 fw-bold'>Add to Cart</button>
-                            <button className='btn btn-success mt-2 ms-2'>Buy Now</button>
+                            <button onClick={() => addToCart(product) } className='btn btn-dark mt-2 fw-bold'>Add to Cart</button>
+                            <button onClick={()=> navigate('/shipping')} className='btn btn-success mt-2 ms-2'>Buy Now</button>
                         </div>
                     </div>
 
@@ -34,6 +52,9 @@ const Product = () => {
                         </div>
                     </div>
                 </div>
+
+                <Review />
+
             </div>
         </section>
     );
