@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 initializeAuthentication();
 
 const useFirebase = () => {
-    // eslint-disable-next-line
+
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
 

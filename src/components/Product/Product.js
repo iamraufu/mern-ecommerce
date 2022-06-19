@@ -16,14 +16,23 @@ const Product = () => {
     const [cart, setCart] = useState([]);
 
     const addToCart = (product) => {
-        const newCart = [...cart, product];
-        setCart(newCart)
-        addToDB(id)
+        shoppingCart(product);
         Swal.fire(
             'Successful!',
             `You Have Added ${product.name}!`,
             'success'
           )
+    }
+
+    const shoppingCart = (product) => {
+        const newCart = [...cart, product];
+        setCart(newCart)
+        addToDB(id);
+    }
+
+    const handleClick = (product) => {
+        shoppingCart(product);
+        navigate('/shipping')
     }
     
     return (
@@ -38,7 +47,7 @@ const Product = () => {
                         <img src={product.image} style={{ borderRadius: '1rem', boxShadow: '0 5px 15px #c4c4c44d' }} className='img-fluid mx-auto d-block mb-3' width={250} alt={product.image} />
                         <div className="d-flex justify-content-center align-items-center">
                             <button onClick={() => addToCart(product) } className='btn btn-dark mt-2 fw-bold'>Add to Cart</button>
-                            <button onClick={()=> navigate('/shipping')} className='btn btn-success mt-2 ms-2'>Buy Now</button>
+                            <button onClick={()=> handleClick(product)} className='btn btn-success mt-2 ms-2'>Buy Now</button>
                         </div>
                     </div>
 

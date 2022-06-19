@@ -48,7 +48,7 @@ const TopProducts = () => {
                                     </Link>
                                     <div className="d-flex justify-content-between align-items-center">
                                         <div className="cart-body col-sm-6">
-                                            <h5 className="cart-title">{product.name}</h5>
+                                            <h2 className="cart-title">{product.name}</h2>
                                             <p className="cart-text">Price: {product.price} Taka</p>
                                         </div>
 
