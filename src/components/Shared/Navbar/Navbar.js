@@ -4,8 +4,11 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../../images/logo.png';
 import products from '../../../data/products.json';
 import { getStoredCart } from '../../../utilities/localDB';
+import useAuth from '../../../hooks/useAuth';
 
 const Navbar = () => {
+
+    const { user } = useAuth();
 
     let savedCart = getStoredCart()
     let cart = [];
@@ -54,23 +57,29 @@ const Navbar = () => {
                                 }} className="nav-link" to="/cart">Cart</NavLink>
                         }
 
-                        <NavLink onClick={() => { window.scrollTo(0, 0); }} style={({ isActive }) => {
-                            return {
-                                color: isActive ? "red" : "",
-                            };
-                        }} className="nav-link" to="/login">Login</NavLink>
+                        {
+                            !user.email && <NavLink onClick={() => { window.scrollTo(0, 0); }} style={({ isActive }) => {
+                                return {
+                                    color: isActive ? "red" : "",
+                                };
+                            }} className="nav-link" to="/login">Login</NavLink>
+                        }
 
-                        <NavLink onClick={() => { window.scrollTo(0, 0); }} style={({ isActive }) => {
-                            return {
-                                color: isActive ? "red" : "",
-                            };
-                        }} className="nav-link" to="/profile">Profile</NavLink>
+                        {
+                            user.email && <NavLink onClick={() => { window.scrollTo(0, 0); }} style={({ isActive }) => {
+                                return {
+                                    color: isActive ? "red" : "",
+                                };
+                            }} className="nav-link" to="/profile">Profile</NavLink>
+                        }
 
-                        <NavLink onClick={() => { window.scrollTo(0, 0); }} style={({ isActive }) => {
-                            return {
-                                color: isActive ? "red" : "",
-                            };
-                        }} className="nav-link" to="/dashboard">Dashboard</NavLink>
+                        {/* {
+                            user.email && <NavLink onClick={() => { window.scrollTo(0, 0); }} style={({ isActive }) => {
+                                return {
+                                    color: isActive ? "red" : "",
+                                };
+                            }} className="nav-link" to="/dashboard">Dashboard</NavLink>
+                        } */}
 
                     </div>
 

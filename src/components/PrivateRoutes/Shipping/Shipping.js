@@ -2,16 +2,20 @@ import React from 'react';
 import './Shipping.css';
 import Navbar from '../../Shared/Navbar/Navbar';
 import { useForm } from "react-hook-form";
-import { getStoredCart } from '../../../utilities/localDB';
+import { useNavigate } from 'react-router-dom';
 
 const Shipping = () => {
 
-    const cart = localStorage.getItem('cart');
-    console.log(cart)
-    console.log(getStoredCart())
-
+    const navigate = useNavigate();
+    
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+
+    const onSubmit = data => {
+        localStorage.setItem('shipping', JSON.stringify(data));
+        navigate('/payment');
+    }
+
+    localStorage.getItem('shipping') && navigate('/payment');
 
     return (
         <section>

@@ -23,7 +23,7 @@ const Cart = () => {
         if (cart.length > 0) {
             setDisabled(false);
             document.getElementById('btn_checkout').style.cursor = 'pointer';
-            document.getElementById('btn_checkout').className = 'btn btn-success mx-auto d-block';
+            document.getElementById('btn_checkout').className = 'btn btn-dark mx-auto d-block p-2';
         }
         // eslint-disable-next-line
     }, [])
