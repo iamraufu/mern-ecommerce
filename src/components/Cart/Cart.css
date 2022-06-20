@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+    .cart-container-title {
+        margin-top: 1rem !important;
+    }
+    .cart-container {
+        padding-bottom: 150px;
+    }
+}
