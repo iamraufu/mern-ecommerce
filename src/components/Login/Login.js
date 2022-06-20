@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import googleImage from '../../images/google.png';
 import githubImage from '../../images/github.png';
 import useAuth from '../../hooks/useAuth';
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -32,9 +33,49 @@ const Login = () => {
                 setLoginError('');
             })
             .catch(error => {
-                setLoginError(error.message);
+                swalAlert(error.message);
             });
     }
+
+    const swalAlert = (error) => {
+        if(error === 'Firebase: Error (auth/user-not-found).'){
+            Swal.fire({
+                icon: 'error',
+                title: 'User not found',
+                text: 'This user does not exist.',
+            })
+        }
+        if(error === 'Firebase: Error (auth/wrong-password).'){
+            Swal.fire({
+                icon: 'error',
+                title: 'Wrong password',
+                text: 'The password you entered is incorrect.',
+            })
+        }
+        if(error === 'Firebase: Error (auth/invalid-email).'){
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid email',
+                text: 'The email you entered is invalid.',
+            })
+        }
+        if(error === 'Firebase: Error (auth/user-disabled).'){
+            Swal.fire({
+                icon: 'error',
+                title: 'User disabled',
+                text: 'This user has been disabled.',
+            })
+        }
+        if(error === 'Firebase: Error (auth/account-exists-with-different-credential).'){
+            Swal.fire({
+                icon: 'error',
+                title: 'Account exists',
+                text: 'An account with this email already exists.',
+            })
+        }
+    }
+
+    error && swalAlert(error);
 
     return (
         <section className='bg-brand bg-brand-container'>
@@ -76,8 +117,6 @@ const Login = () => {
                     </div>
 
                 </form>
-
-                <p className='text-danger fw-bold mt-3 text-center'>{error.slice(10,)}</p>
 
                 <div className="d-flex justify-content-center align-items-center mt-3">
                     <div className="col-sm-2"><hr /></div>
