@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './Cart.css';
 import { Link, useNavigate } from 'react-router-dom';
 // import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
@@ -24,6 +25,7 @@ const Cart = () => {
             setDisabled(false);
             document.getElementById('btn_checkout').style.cursor = 'pointer';
             document.getElementById('btn_checkout').className = 'btn btn-dark mx-auto d-block p-2';
+            document.getElementById('btn_checkout_sm').className = 'btn btn-dark mx-auto d-block p-2';
         }
         // eslint-disable-next-line
     }, [])
@@ -47,8 +49,8 @@ const Cart = () => {
             <div className="container">
                 <div className="row">
 
-                    <div className="col-lg-9">
-                        <h1 className='mt-5 fs-4'>Shopping Cart</h1>
+                    <div className="cart-container col-lg-9">
+                        <h1 className='mt-5 fs-4 cart-container-title'>Shopping Cart</h1>
                         {
                             cart?.length > 0 ?
                                 <div className="table-responsive pb-5">
@@ -85,14 +87,25 @@ const Cart = () => {
                         }
                     </div>
 
-                    <div className="col-lg-3 mt-5">
-                        <div style={{ border: '1px solid lightgrey' }} className="p-2">
+                    <div className="col-lg-3 mt-5 pb-2 d-none d-lg-block">
+                        <div style={{ border: '1px solid lightgrey' }} className="p-2 mt-4">
                             <h2 className='fs-5 text-center'>Sub Total: {cart.reduce((a, b) => { return a + (b.quantity); }, 0)} Item(s)</h2>
                             <h3 className='fs-5 text-center'>Price: {cart.reduce((a, b) => a + b.price * b.quantity, 0)} Taka</h3>
                         </div>
 
                         <div onClick={() => handleClick()} style={{ border: '1px solid lightgrey' }} className="py-2">
                             <button id='btn_checkout' className='btn btn-secondary mx-auto d-block' disabled={disabled}>Proceed to Checkout</button>
+                        </div>
+                    </div>
+
+                    <div style={{ boxShadow: '0 3px 10px 3px #0003' }} className="col-lg-3 mt-5 py-3 d-lg-none fixed-bottom bg-brand">
+                        <div style={{ border: '1px solid lightgrey' }} className="p-2">
+                            <h2 className='fs-5 text-center'>Sub Total: {cart.reduce((a, b) => { return a + (b.quantity); }, 0)} Item(s)</h2>
+                            <h3 className='fs-5 text-center'>Price: {cart.reduce((a, b) => a + b.price * b.quantity, 0)} Taka</h3>
+                        </div>
+
+                        <div onClick={() => handleClick()} style={{ border: '1px solid lightgrey' }} className="py-2">
+                            <button id='btn_checkout_sm' className='btn btn-secondary mx-auto d-block' disabled={disabled}>Proceed to Checkout</button>
                         </div>
                     </div>
 
