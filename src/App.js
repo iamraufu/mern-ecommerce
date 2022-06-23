@@ -17,6 +17,7 @@ import PrivateOutlet from './components/PrivateOutlet/PrivateOutlet';
 import logo from './images/logo.png';
 import ResetPassword from './components/ResetPassword/ResetPassword';
 import Payment from './components/PrivateRoutes/Payment/Payment';
+import Order from './components/PrivateRoutes/Order/Order';
 
 const Login = lazy(() => import('./components/Login/Login'));
 
@@ -50,6 +51,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="shipping" element={<Shipping />} />
             <Route path="payment" element={<Payment />} />
+            <Route path="order" element={<Order />} />
           </Route>
 
           <Route path="*" element={<NotFound />} />
